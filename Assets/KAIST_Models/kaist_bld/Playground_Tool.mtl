@@ -1,0 +1,5 @@
+newmtl VMtl2201
+Kd 1 1 1
+map_Kd G_core0518-blds_textureatlas_1.png
+illum 2
+

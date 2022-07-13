@@ -1,0 +1,33 @@
+newmtl lambert8
+Kd 1 1 1
+map_Kd kaist_blds0518_12.png
+illum 2
+
+newmtl Material__253
+Kd 1 1 1
+map_Kd kaist_blds0518_28.png
+illum 2
+
+newmtl lambert12
+Kd 0 0.0764 0
+illum 2
+
+newmtl lambert5_1
+Kd 1 1 1
+map_Kd kaist_blds0518_116.png
+illum 2
+
+newmtl Material__132
+Kd 1 1 1
+map_Kd kaist_blds0518_63.png
+illum 2
+
+newmtl lambert6
+Kd 1 1 1
+map_Kd kaist_blds0518_69.png
+illum 2
+
+newmtl lambert1
+Kd 0.2 0.2 0.2
+illum 2
+

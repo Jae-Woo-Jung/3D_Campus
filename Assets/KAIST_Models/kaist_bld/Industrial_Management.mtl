@@ -1,0 +1,29 @@
+newmtl VMtl1682
+Kd 1 1 1
+map_Kd kaist_blds0518_32.png
+illum 2
+
+newmtl VMtl1728
+Kd 0.5 0.5 0.5
+illum 2
+
+newmtl VMtl1732
+Kd 1 1 1
+map_Kd kaist_blds0518_7.png
+illum 2
+
+newmtl VMtl1497
+Kd 1 1 1
+map_Kd kaist_blds0518_39.png
+illum 2
+
+newmtl VMtl1501
+Kd 1 1 1
+map_Kd G_core0518-blds_textureatlas_2.png
+illum 2
+
+newmtl VMtl1505
+Kd 1 1 1
+map_Kd kaist_blds0518_61.png
+illum 2
+

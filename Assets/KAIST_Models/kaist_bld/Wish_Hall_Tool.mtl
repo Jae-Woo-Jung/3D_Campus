@@ -1,0 +1,19 @@
+newmtl VMtl1690
+Kd 1 1 1
+map_Kd kaist_blds0518_11.png
+illum 2
+
+newmtl VMtl1691
+Kd 1 1 1
+map_Kd kaist_blds0518_50.png
+illum 2
+
+newmtl VMtl1692
+Kd 0.5 0.5 0.5
+illum 2
+
+newmtl VMtl1693
+Kd 1 1 1
+map_Kd kaist_blds0518_8.png
+illum 2
+

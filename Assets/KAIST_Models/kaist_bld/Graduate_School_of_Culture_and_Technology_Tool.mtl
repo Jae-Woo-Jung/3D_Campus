@@ -1,0 +1,44 @@
+newmtl VMtl1495
+Kd 1 1 1
+map_Kd kaist_blds0518_2.png
+illum 2
+
+newmtl VMtl1496
+Kd 1 1 1
+map_Kd kaist_blds0518_2.png
+illum 2
+
+newmtl VMtl1498
+Kd 1 1 1
+map_Kd kaist_blds0518_9.png
+illum 2
+
+newmtl VMtl1499
+Kd 1 1 1
+map_Kd kaist_blds0518_25.png
+illum 2
+
+newmtl VMtl1500
+Kd 1 1 1
+map_Kd kaist_blds0518_2.png
+illum 2
+
+newmtl VMtl1502
+Kd 0.260785 0.260785 0.260785
+illum 2
+
+newmtl VMtl1503
+Kd 1 1 1
+map_Kd kaist_blds0518_2.png
+illum 2
+
+newmtl VMtl1504
+Kd 1 1 1
+map_Kd kaist_blds0518_23.png
+illum 2
+
+newmtl VMtl1506
+Kd 1 1 1
+map_Kd kaist_blds0518_17.png
+illum 2
+

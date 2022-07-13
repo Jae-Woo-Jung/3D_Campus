@@ -1,0 +1,49 @@
+newmtl VMtl1442
+Kd 1 1 1
+map_Kd kaist_blds0518_20.png
+illum 2
+
+newmtl VMtl1443
+Kd 1 1 1
+map_Kd kaist_blds0518_7.png
+illum 2
+
+newmtl VMtl1445
+Kd 1 1 1
+map_Kd kaist_blds0518_39.png
+illum 2
+
+newmtl VMtl1446
+Kd 1 1 1
+map_Kd kaist_blds0518_61.png
+illum 2
+
+newmtl VMtl1448
+Kd 1 1 1
+map_Kd kaist_blds0518_104.png
+illum 2
+
+newmtl VMtl1449
+Kd 1 1 1
+map_Kd G_core0518-blds_textureatlas_1.png
+illum 2
+
+newmtl VMtl1451
+Kd 1 1 1
+map_Kd kaist_blds0518_38.png
+illum 2
+
+newmtl VMtl1453
+Kd 0.5 0.5 0.5
+illum 2
+
+newmtl VMtl1454
+Kd 1 1 1
+map_Kd kaist_blds0518_71.png
+illum 2
+
+newmtl VMtl1456
+Kd 1 1 1
+map_Kd kaist_blds0518_32.png
+illum 2
+

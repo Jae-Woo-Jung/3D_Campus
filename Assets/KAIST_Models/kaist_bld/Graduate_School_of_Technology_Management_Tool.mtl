@@ -1,0 +1,68 @@
+newmtl VMtl1712
+Kd 0.376471 0.376471 0.376471
+illum 2
+
+newmtl VMtl1713
+Kd 1 1 1
+map_Kd kaist_blds0518_93.png
+illum 2
+
+newmtl VMtl1714
+Kd 1 1 1
+map_Kd kaist_blds0518_9.png
+illum 2
+
+newmtl VMtl1715
+Kd 1 1 1
+map_Kd G_core0518-blds_textureatlas_2.png
+illum 2
+
+newmtl VMtl1716
+Kd 1 1 1
+map_Kd kaist_blds0518_2.png
+illum 2
+
+newmtl VMtl1717
+Kd 1 1 1
+map_Kd kaist_blds0518_46.png
+illum 2
+
+newmtl VMtl1718
+Kd 1 1 1
+map_Kd kaist_blds0518_48.png
+illum 2
+
+newmtl VMtl1719
+Kd 1 1 1
+map_Kd kaist_blds0518_58.png
+illum 2
+
+newmtl VMtl1720
+Kd 1 1 1
+map_Kd kaist_blds0518_9.png
+illum 2
+
+newmtl VMtl1721
+Kd 1 1 1
+map_Kd kaist_blds0518_11.png
+illum 2
+
+newmtl VMtl1722
+Kd 1 1 1
+map_Kd kaist_blds0518_2.png
+illum 2
+
+newmtl VMtl1723
+Kd 0.5 0.5 0.5
+illum 2
+
+newmtl VMtl1724
+Kd 1 1 1
+map_Kd kaist_blds0518_17.png
+illum 2
+
+newmtl VMtl1726
+Kd 1 1 1
+map_Kd kaist_blds0518_17.png
+illum 2
+

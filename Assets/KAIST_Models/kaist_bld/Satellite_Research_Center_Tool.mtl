@@ -1,0 +1,100 @@
+newmtl Material__10
+Kd 1 1 1
+map_Kd kaist_blds0518_117.png
+illum 2
+
+newmtl Material__11
+Kd 1 1 1
+map_Kd kaist_blds0518_81.png
+illum 2
+
+newmtl Material__12
+Kd 1 1 1
+map_Kd kaist_blds0518_55.png
+illum 2
+
+newmtl Material__2
+Kd 1 1 1
+map_Kd kaist_blds0518_74.png
+illum 2
+
+newmtl Material__3
+Kd 1 1 1
+map_Kd kaist_blds0518_94.png
+illum 2
+
+newmtl Material__4
+Kd 1 1 1
+map_Kd kaist_blds0518_10.png
+illum 2
+
+newmtl Material__5
+Kd 1 1 1
+map_Kd G_core0518-blds_textureatlas_1.png
+illum 2
+
+newmtl Material__6
+Kd 1 1 1
+map_Kd G_core0518-blds_textureatlas_1.png
+illum 2
+
+newmtl Material__7
+Kd 1 1 1
+map_Kd kaist_blds0518_73.png
+illum 2
+
+newmtl Material__8
+Kd 1 1 1
+map_Kd kaist_blds0518_31.png
+illum 2
+
+newmtl Material__9
+Kd 1 1 1
+map_Kd G_core0518-blds_textureatlas_2.png
+illum 2
+
+newmtl Material__15
+Kd 1 1 1
+map_Kd kaist_blds0518_66.png
+illum 2
+
+newmtl Material__16
+Kd 1 1 1
+map_Kd kaist_blds0518_79.png
+illum 2
+
+newmtl Material__17
+Kd 1 1 1
+map_Kd G_core0518-blds_textureatlas_2.png
+illum 2
+
+newmtl Material__18
+Kd 1 1 1
+map_Kd kaist_blds0518_29.png
+illum 2
+
+newmtl Material__19
+Kd 1 1 1
+map_Kd kaist_blds0518_57.png
+illum 2
+
+newmtl Material__20
+Kd 1 1 1
+map_Kd kaist_blds0518_110.png
+illum 2
+
+newmtl Material__21
+Kd 1 1 1
+map_Kd G_core0518-blds_textureatlas_1.png
+illum 2
+
+newmtl Material__22
+Kd 1 1 1
+map_Kd kaist_blds0518_87.png
+illum 2
+
+newmtl Material__23
+Kd 1 1 1
+map_Kd G_core0518-blds_textureatlas_2.png
+illum 2
+

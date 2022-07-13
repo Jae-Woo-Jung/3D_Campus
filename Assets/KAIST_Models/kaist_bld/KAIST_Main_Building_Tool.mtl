@@ -1,0 +1,24 @@
+newmtl VMtl1475
+Kd 0 0.052941 0.052941
+illum 2
+
+newmtl VMtl1491
+Kd 1 1 1
+map_Kd kaist_blds0518_113.png
+illum 2
+
+newmtl VMtl1492
+Kd 1 1 1
+map_Kd kaist_blds0518_42.png
+illum 2
+
+newmtl VMtl1493
+Kd 1 1 1
+map_Kd kaist_blds0518_34.png
+illum 2
+
+newmtl VMtl1494
+Kd 1 1 1
+map_Kd kaist_blds0518_42.png
+illum 2
+

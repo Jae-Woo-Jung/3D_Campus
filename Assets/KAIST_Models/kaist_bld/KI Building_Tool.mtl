@@ -1,0 +1,15 @@
+newmtl KI_bld
+Kd 1 1 1
+map_Kd kaist_blds0518_90.png
+illum 2
+
+newmtl lambert5
+Kd 1 1 1
+map_Kd kaist_blds0518_28.png
+illum 2
+
+newmtl lambert10
+Kd 1 1 1
+map_Kd G_core0518-blds_textureatlas_0.png
+illum 2
+

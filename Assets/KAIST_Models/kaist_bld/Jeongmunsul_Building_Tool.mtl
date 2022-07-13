@@ -1,0 +1,44 @@
+newmtl VMtl1956
+Kd 0.5 0.5 0.5
+illum 2
+
+newmtl VMtl1957
+Kd 1 1 1
+map_Kd kaist_blds0518_109.png
+illum 2
+
+newmtl VMtl1958
+Kd 1 1 1
+map_Kd kaist_blds0518_68.png
+illum 2
+
+newmtl VMtl1959
+Kd 1 1 1
+map_Kd kaist_blds0518_97.png
+illum 2
+
+newmtl VMtl1960
+Kd 1 1 1
+map_Kd kaist_blds0518_19.png
+illum 2
+
+newmtl VMtl1970
+Kd 1 1 1
+map_Kd kaist_blds0518_72.png
+illum 2
+
+newmtl VMtl1971
+Kd 1 1 1
+map_Kd kaist_blds0518_103.png
+illum 2
+
+newmtl VMtl1972
+Kd 1 1 1
+map_Kd kaist_blds0518_30.png
+illum 2
+
+newmtl VMtl1973
+Kd 1 1 1
+map_Kd kaist_blds0518_107.png
+illum 2
+

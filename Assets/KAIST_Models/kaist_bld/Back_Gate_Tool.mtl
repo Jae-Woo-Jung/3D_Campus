@@ -1,0 +1,13 @@
+newmtl Material__33
+Kd 1 1 1
+map_Kd kaist_blds0518_6.png
+illum 2
+
+newmtl Material__34
+Kd 0.421569 0.421569 0.421569
+illum 2
+
+newmtl Material__35
+Kd 0.5 0.5 0.5
+illum 2
+

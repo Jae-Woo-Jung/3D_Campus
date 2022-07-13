@@ -1,0 +1,119 @@
+newmtl VMtl684
+Kd 1 1 1
+map_Kd kaist_blds0518_59.png
+illum 2
+
+newmtl VMtl697
+Kd 1 1 1
+map_Kd kaist_blds0518_40.png
+illum 2
+
+newmtl VMtl699
+Kd 1 1 1
+map_Kd G_core0518-blds_textureatlas_2.png
+illum 2
+
+newmtl VMtl682
+Kd 1 1 1
+map_Kd kaist_blds0518_59.png
+illum 2
+
+newmtl VMtl701
+Kd 1 1 1
+map_Kd kaist_blds0518_1.png
+illum 2
+
+newmtl VMtl703
+Kd 1 1 1
+map_Kd kaist_blds0518_1.png
+illum 2
+
+newmtl VMtl705
+Kd 1 1 1
+map_Kd kaist_blds0518_1.png
+illum 2
+
+newmtl VMtl707
+Kd 1 1 1
+map_Kd G_core0518-blds_textureatlas_1.png
+illum 2
+
+newmtl VMtl709
+Kd 1 1 1
+map_Kd kaist_blds0518_40.png
+illum 2
+
+newmtl VMtl711
+Kd 1 1 1
+map_Kd kaist_blds0518_40.png
+illum 2
+
+newmtl VMtl713
+Kd 1 1 1
+map_Kd kaist_blds0518_40.png
+illum 2
+
+newmtl VMtl715
+Kd 1 1 1
+map_Kd kaist_blds0518_40.png
+illum 2
+
+newmtl VMtl717
+Kd 1 1 1
+map_Kd G_core0518-blds_textureatlas_1.png
+illum 2
+
+newmtl VMtl719
+Kd 1 1 1
+map_Kd kaist_blds0518_1.png
+illum 2
+
+newmtl VMtl721
+Kd 1 1 1
+map_Kd kaist_blds0518_40.png
+illum 2
+
+newmtl VMtl677
+Kd 1 1 1
+map_Kd kaist_blds0518_40.png
+illum 2
+
+newmtl VMtl678
+Kd 0.5 0.5 0.5
+illum 2
+
+newmtl VMtl680
+Kd 1 1 1
+map_Kd kaist_blds0518_40.png
+illum 2
+
+newmtl VMtl1919
+Kd 1 1 1
+map_Kd kaist_blds0518_119.png
+illum 2
+
+newmtl VMtl1921
+Kd 1 1 1
+map_Kd kaist_blds0518_1.png
+illum 2
+
+newmtl VMtl1930
+Kd 1 1 1
+map_Kd kaist_blds0518_1.png
+illum 2
+
+newmtl VMtl1937
+Kd 1 1 1
+map_Kd G_core0518-blds_textureatlas_1.png
+illum 2
+
+newmtl VMtl1939
+Kd 1 1 1
+map_Kd kaist_blds0518_1.png
+illum 2
+
+newmtl VMtl1947
+Kd 1 1 1
+map_Kd kaist_blds0518_36.png
+illum 2
+
