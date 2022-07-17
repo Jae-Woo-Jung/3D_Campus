@@ -1,0 +1,167 @@
+fileFormatVersion: 2
+guid: b3443649681fb664a80b1c5af765d044
+timeCreated: 1508602056
+licenseType: Store
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: Arm_goose
+    100002: Bone
+    100004: Bone.001
+    100006: feet.l
+    100008: feet.l_end
+    100010: feet.r
+    100012: feet.r_end
+    100014: //RootNode
+    100016: goose_midle
+    100018: head
+    100020: leg1.l
+    100022: leg1.r
+    100024: leg2.l
+    100026: leg2.r
+    100028: leg3.l
+    100030: leg3.l_end
+    100032: leg3.r
+    100034: leg3.r_end
+    100036: meck1
+    100038: mouth
+    100040: mouth_end
+    100042: neck2
+    100044: neck3
+    100046: neck4
+    100048: spine1
+    100050: spine2
+    100052: spine3
+    100054: tail
+    100056: tail_end
+    100058: wing.l
+    100060: wing.r
+    100062: wing1.l
+    100064: wing1.r
+    100066: wing2.l
+    100068: wing2.l_end
+    100070: wing2.r
+    100072: wing2.r_end
+    400000: Arm_goose
+    400002: Bone
+    400004: Bone.001
+    400006: feet.l
+    400008: feet.l_end
+    400010: feet.r
+    400012: feet.r_end
+    400014: //RootNode
+    400016: goose_midle
+    400018: head
+    400020: leg1.l
+    400022: leg1.r
+    400024: leg2.l
+    400026: leg2.r
+    400028: leg3.l
+    400030: leg3.l_end
+    400032: leg3.r
+    400034: leg3.r_end
+    400036: meck1
+    400038: mouth
+    400040: mouth_end
+    400042: neck2
+    400044: neck3
+    400046: neck4
+    400048: spine1
+    400050: spine2
+    400052: spine3
+    400054: tail
+    400056: tail_end
+    400058: wing.l
+    400060: wing.r
+    400062: wing1.l
+    400064: wing1.r
+    400066: wing2.l
+    400068: wing2.l_end
+    400070: wing2.r
+    400072: wing2.r_end
+    4300000: goose_midle
+    7400000: Arm_goose|attack
+    7400002: Arm_goose|dead
+    7400004: Arm_goose|eat
+    7400006: Arm_goose|hit
+    7400008: Arm_goose|idle_1
+    7400010: Arm_goose|idle_2
+    7400012: Arm_goose|run
+    7400014: Arm_goose|sleep
+    7400016: Arm_goose|sleep_end
+    7400018: Arm_goose|sleep_start
+    7400020: Arm_goose|swim
+    7400022: Arm_goose|Walk
+    9500000: //RootNode
+    11100000: //RootNode
+    13700000: goose_midle
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 1
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 1
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
