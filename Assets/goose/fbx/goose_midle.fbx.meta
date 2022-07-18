@@ -1,109 +1,293 @@
 fileFormatVersion: 2
 guid: b3443649681fb664a80b1c5af765d044
-timeCreated: 1508602056
-licenseType: Store
 ModelImporter:
-  serializedVersion: 19
-  fileIDToRecycleName:
-    100000: Arm_goose
-    100002: Bone
-    100004: Bone.001
-    100006: feet.l
-    100008: feet.l_end
-    100010: feet.r
-    100012: feet.r_end
-    100014: //RootNode
-    100016: goose_midle
-    100018: head
-    100020: leg1.l
-    100022: leg1.r
-    100024: leg2.l
-    100026: leg2.r
-    100028: leg3.l
-    100030: leg3.l_end
-    100032: leg3.r
-    100034: leg3.r_end
-    100036: meck1
-    100038: mouth
-    100040: mouth_end
-    100042: neck2
-    100044: neck3
-    100046: neck4
-    100048: spine1
-    100050: spine2
-    100052: spine3
-    100054: tail
-    100056: tail_end
-    100058: wing.l
-    100060: wing.r
-    100062: wing1.l
-    100064: wing1.r
-    100066: wing2.l
-    100068: wing2.l_end
-    100070: wing2.r
-    100072: wing2.r_end
-    400000: Arm_goose
-    400002: Bone
-    400004: Bone.001
-    400006: feet.l
-    400008: feet.l_end
-    400010: feet.r
-    400012: feet.r_end
-    400014: //RootNode
-    400016: goose_midle
-    400018: head
-    400020: leg1.l
-    400022: leg1.r
-    400024: leg2.l
-    400026: leg2.r
-    400028: leg3.l
-    400030: leg3.l_end
-    400032: leg3.r
-    400034: leg3.r_end
-    400036: meck1
-    400038: mouth
-    400040: mouth_end
-    400042: neck2
-    400044: neck3
-    400046: neck4
-    400048: spine1
-    400050: spine2
-    400052: spine3
-    400054: tail
-    400056: tail_end
-    400058: wing.l
-    400060: wing.r
-    400062: wing1.l
-    400064: wing1.r
-    400066: wing2.l
-    400068: wing2.l_end
-    400070: wing2.r
-    400072: wing2.r_end
-    4300000: goose_midle
-    7400000: Arm_goose|attack
-    7400002: Arm_goose|dead
-    7400004: Arm_goose|eat
-    7400006: Arm_goose|hit
-    7400008: Arm_goose|idle_1
-    7400010: Arm_goose|idle_2
-    7400012: Arm_goose|run
-    7400014: Arm_goose|sleep
-    7400016: Arm_goose|sleep_end
-    7400018: Arm_goose|sleep_start
-    7400020: Arm_goose|swim
-    7400022: Arm_goose|Walk
-    9500000: //RootNode
-    11100000: //RootNode
-    13700000: goose_midle
+  serializedVersion: 21202
+  internalIDToNameTable:
+  - first:
+      1: 100000
+    second: Arm_goose
+  - first:
+      1: 100002
+    second: Bone
+  - first:
+      1: 100004
+    second: Bone.001
+  - first:
+      1: 100006
+    second: feet.l
+  - first:
+      1: 100008
+    second: feet.l_end
+  - first:
+      1: 100010
+    second: feet.r
+  - first:
+      1: 100012
+    second: feet.r_end
+  - first:
+      1: 100014
+    second: //RootNode
+  - first:
+      1: 100016
+    second: goose_midle
+  - first:
+      1: 100018
+    second: head
+  - first:
+      1: 100020
+    second: leg1.l
+  - first:
+      1: 100022
+    second: leg1.r
+  - first:
+      1: 100024
+    second: leg2.l
+  - first:
+      1: 100026
+    second: leg2.r
+  - first:
+      1: 100028
+    second: leg3.l
+  - first:
+      1: 100030
+    second: leg3.l_end
+  - first:
+      1: 100032
+    second: leg3.r
+  - first:
+      1: 100034
+    second: leg3.r_end
+  - first:
+      1: 100036
+    second: meck1
+  - first:
+      1: 100038
+    second: mouth
+  - first:
+      1: 100040
+    second: mouth_end
+  - first:
+      1: 100042
+    second: neck2
+  - first:
+      1: 100044
+    second: neck3
+  - first:
+      1: 100046
+    second: neck4
+  - first:
+      1: 100048
+    second: spine1
+  - first:
+      1: 100050
+    second: spine2
+  - first:
+      1: 100052
+    second: spine3
+  - first:
+      1: 100054
+    second: tail
+  - first:
+      1: 100056
+    second: tail_end
+  - first:
+      1: 100058
+    second: wing.l
+  - first:
+      1: 100060
+    second: wing.r
+  - first:
+      1: 100062
+    second: wing1.l
+  - first:
+      1: 100064
+    second: wing1.r
+  - first:
+      1: 100066
+    second: wing2.l
+  - first:
+      1: 100068
+    second: wing2.l_end
+  - first:
+      1: 100070
+    second: wing2.r
+  - first:
+      1: 100072
+    second: wing2.r_end
+  - first:
+      4: 400000
+    second: Arm_goose
+  - first:
+      4: 400002
+    second: Bone
+  - first:
+      4: 400004
+    second: Bone.001
+  - first:
+      4: 400006
+    second: feet.l
+  - first:
+      4: 400008
+    second: feet.l_end
+  - first:
+      4: 400010
+    second: feet.r
+  - first:
+      4: 400012
+    second: feet.r_end
+  - first:
+      4: 400014
+    second: //RootNode
+  - first:
+      4: 400016
+    second: goose_midle
+  - first:
+      4: 400018
+    second: head
+  - first:
+      4: 400020
+    second: leg1.l
+  - first:
+      4: 400022
+    second: leg1.r
+  - first:
+      4: 400024
+    second: leg2.l
+  - first:
+      4: 400026
+    second: leg2.r
+  - first:
+      4: 400028
+    second: leg3.l
+  - first:
+      4: 400030
+    second: leg3.l_end
+  - first:
+      4: 400032
+    second: leg3.r
+  - first:
+      4: 400034
+    second: leg3.r_end
+  - first:
+      4: 400036
+    second: meck1
+  - first:
+      4: 400038
+    second: mouth
+  - first:
+      4: 400040
+    second: mouth_end
+  - first:
+      4: 400042
+    second: neck2
+  - first:
+      4: 400044
+    second: neck3
+  - first:
+      4: 400046
+    second: neck4
+  - first:
+      4: 400048
+    second: spine1
+  - first:
+      4: 400050
+    second: spine2
+  - first:
+      4: 400052
+    second: spine3
+  - first:
+      4: 400054
+    second: tail
+  - first:
+      4: 400056
+    second: tail_end
+  - first:
+      4: 400058
+    second: wing.l
+  - first:
+      4: 400060
+    second: wing.r
+  - first:
+      4: 400062
+    second: wing1.l
+  - first:
+      4: 400064
+    second: wing1.r
+  - first:
+      4: 400066
+    second: wing2.l
+  - first:
+      4: 400068
+    second: wing2.l_end
+  - first:
+      4: 400070
+    second: wing2.r
+  - first:
+      4: 400072
+    second: wing2.r_end
+  - first:
+      43: 4300000
+    second: goose_midle
+  - first:
+      74: 7400000
+    second: Arm_goose|attack
+  - first:
+      74: 7400002
+    second: Arm_goose|dead
+  - first:
+      74: 7400004
+    second: Arm_goose|eat
+  - first:
+      74: 7400006
+    second: Arm_goose|hit
+  - first:
+      74: 7400008
+    second: Arm_goose|idle_1
+  - first:
+      74: 7400010
+    second: Arm_goose|idle_2
+  - first:
+      74: 7400012
+    second: Arm_goose|run
+  - first:
+      74: 7400014
+    second: Arm_goose|sleep
+  - first:
+      74: 7400016
+    second: Arm_goose|sleep_end
+  - first:
+      74: 7400018
+    second: Arm_goose|sleep_start
+  - first:
+      74: 7400020
+    second: Arm_goose|swim
+  - first:
+      74: 7400022
+    second: Arm_goose|Walk
+  - first:
+      95: 9500000
+    second: //RootNode
+  - first:
+      111: 11100000
+    second: //RootNode
+  - first:
+      137: 13700000
+    second: goose_midle
+  - first:
+      74: 643999904087962458
+    second: Arm_goose|attack (2)
+  externalObjects: {}
   materials:
-    importMaterials: 1
+    materialImportMode: 1
     materialName: 0
     materialSearch: 1
+    materialLocation: 0
   animations:
     legacyGenerateAnimations: 4
     bakeSimulation: 0
     resampleCurves: 1
     optimizeGameObjects: 0
+    removeConstantScaleCurves: 0
     motionNodeName: 
     rigImportErrors: 
     rigImportWarnings: 
@@ -111,39 +295,411 @@ ModelImporter:
     animationImportWarnings: 
     animationRetargetingWarnings: 
     animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
     animationCompression: 1
     animationRotationError: 0.5
     animationPositionError: 0.5
     animationScaleError: 0.5
     animationWrapMode: 0
     extraExposedTransformPaths: []
-    clipAnimations: []
+    extraUserProperties: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Arm_goose|attack
+      takeName: Arm_goose|attack
+      internalID: 0
+      firstFrame: 0
+      lastFrame: 25
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Arm_goose|dead
+      takeName: Arm_goose|dead
+      internalID: 0
+      firstFrame: 0
+      lastFrame: 20
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Arm_goose|eat
+      takeName: Arm_goose|eat
+      internalID: 0
+      firstFrame: 0
+      lastFrame: 70
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Arm_goose|hit
+      takeName: Arm_goose|hit
+      internalID: 0
+      firstFrame: 0
+      lastFrame: 20
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Arm_goose|idle_1
+      takeName: Arm_goose|idle_1
+      internalID: 0
+      firstFrame: 0
+      lastFrame: 80
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Arm_goose|idle_2
+      takeName: Arm_goose|idle_2
+      internalID: 0
+      firstFrame: 0
+      lastFrame: 80
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Arm_goose|run
+      takeName: Arm_goose|run
+      internalID: 0
+      firstFrame: 0
+      lastFrame: 15
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Arm_goose|sleep
+      takeName: Arm_goose|sleep
+      internalID: 0
+      firstFrame: 0
+      lastFrame: 60
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Arm_goose|sleep_end
+      takeName: Arm_goose|sleep_end
+      internalID: 0
+      firstFrame: 0
+      lastFrame: 40
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Arm_goose|sleep_start
+      takeName: Arm_goose|sleep_start
+      internalID: 0
+      firstFrame: 0
+      lastFrame: 40
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Arm_goose|swim
+      takeName: Arm_goose|swim
+      internalID: 0
+      firstFrame: 0
+      lastFrame: 40
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Arm_goose|Walk
+      takeName: Arm_goose|Walk
+      internalID: 0
+      firstFrame: 0
+      lastFrame: 30
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
     isReadable: 1
   meshes:
     lODScreenPercentages: []
     globalScale: 1
     meshCompression: 0
     addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importVisibility: 0
     importBlendShapes: 1
+    importCameras: 0
+    importLights: 0
+    nodeNameCollisionStrategy: 0
+    fileIdsGeneration: 1
     swapUVChannels: 0
     generateSecondaryUV: 0
     useFileUnits: 1
-    optimizeMeshForGPU: 1
     keepQuads: 0
     weldVertices: 1
+    bakeAxisConversion: 0
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    optimizeBones: 1
+    meshOptimizationFlags: -1
+    indexFormat: 1
     secondaryUVAngleDistortion: 8
     secondaryUVAreaDistortion: 15.000001
     secondaryUVHardAngle: 88
+    secondaryUVMarginMethod: 0
+    secondaryUVMinLightmapResolution: 40
+    secondaryUVMinObjectScale: 1
     secondaryUVPackMargin: 4
     useFileScale: 1
   tangentSpace:
     normalSmoothAngle: 60
     normalImportMode: 0
     tangentImportMode: 3
+    normalCalculationMode: 0
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 1
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
   importAnimation: 1
-  copyAvatar: 0
   humanDescription:
-    serializedVersion: 2
+    serializedVersion: 3
     human: []
     skeleton: []
     armTwist: 0.5
@@ -153,14 +709,17 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
+    globalScale: 1
     rootMotionBoneName: 
-    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
     hasTranslationDoF: 0
     hasExtraRoot: 1
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
   animationType: 1
   humanoidOversampling: 1
+  avatarSetup: 0
+  addHumanoidExtraRootOnlyWhenUsingAvatar: 0
   additionalBone: 0
   userData: 
   assetBundleName: 
