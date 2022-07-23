@@ -356,6 +356,7 @@
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEngine.UI.ref.dll"
 "Assets/MeshGenerator.cs"
 "Assets/Scripts/CameraBehaviour.cs"
+"Assets/Scripts/PlayerBehavior.cs"
 -langversion:9.0
 
 /deterministic

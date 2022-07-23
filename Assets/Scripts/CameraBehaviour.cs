@@ -40,13 +40,13 @@ public class CameraBehaviour : MonoBehaviour
         if (Input.GetKey("q") && Input.GetKey("left shift"))
         {
             //X축 기준으로 회전
-            transform.RotateAround(goose_position, Vector3.right, -rotSpeed);
+            transform.RotateAround(goose_position, target.rotation*Vector3.right, -rotSpeed);
         }
 
         if (Input.GetKey("e") && Input.GetKey("left shift"))
         {
             //X축 기준으로 회전
-            transform.RotateAround(goose_position, Vector3.right, rotSpeed);
+            transform.RotateAround(goose_position, target.rotation*Vector3.right, rotSpeed);
         }
 
         lookOffset = transform.position - goose_position;
