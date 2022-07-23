@@ -13,7 +13,7 @@ public class CameraBehaviour : MonoBehaviour
     Vector3 lookOffset = new Vector3(0, 10.0f, -1.0f);
 
     [Tooltip("대상과 카메라 간 거리 조절.")]
-    public float currentZoom = 10.0f;
+    public float currentZoom = 2.5f;
 
     public float minZoom = 1.0f;
     public float maxZoom = 10.0f;

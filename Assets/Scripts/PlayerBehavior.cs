@@ -11,7 +11,7 @@ public class PlayerBehavior : MonoBehaviour
     [Tooltip("이동 속도")]
     public float moveSpeed = 5.0f;
     [Tooltip("회전 속도")]
-    public float rotationSpeed = 1.0f;
+    public float rotationSpeed = 5.0f;
     [Tooltip("점프력")]
     public float jumpPower = 5.0f;
 
