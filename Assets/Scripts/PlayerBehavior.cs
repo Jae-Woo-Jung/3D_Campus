@@ -38,16 +38,6 @@ public class PlayerBehavior : MonoBehaviour
     [Tooltip("바닥과 플레이어 간 거리")]
     float heightAboveGround;
 
-
-    /// <summary>
-    /// 플레이어가 움직일 방향 설정 함수 (이후 FixedUpdate에서 움직임)
-    /// </summary>
-    /// <param name="_velocity">플레이어가 움직일 방향 벡터</param>
-    public void Move(Vector3 _velocity)
-    {
-        velocity = _velocity;
-    }
-
     /// <summary>
     /// 플레이어의 방향 설정
     /// </summary>
@@ -95,10 +85,10 @@ public class PlayerBehavior : MonoBehaviour
         Vector3 moveInput = new Vector3(0, 0, vertical);
         Vector3 moveVelocity = moveInput.normalized * moveSpeed;
         Vector3 rotateInput = new Vector3(0, horizontal, 0);
-        Vector3 rotateVelocity = moveInput.normalized * moveSpeed;
+        Vector3 rotateVelocity = rotateInput.normalized * rotationSpeed;
 
-        Move(moveVelocity);
-        transform.Rotate(rotateInput);
+        velocity = moveVelocity;
+        transform.Rotate(rotateVelocity);
 
         //바닥과의 거리 구하기
         {
