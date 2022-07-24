@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class water_check : MonoBehaviour
 {
-    [SerializeField][Tooltip("물 속 저항력")] private float waterDrag=2.0f;
+    [SerializeField][Tooltip("물 속 저항력")] private float waterDrag=5.0f;
     [SerializeField] [Tooltip("물 밖 저항력")] private float originDrag=0.0f; 
 
     [SerializeField] private GameObject thePlayer;
@@ -30,11 +30,17 @@ public class water_check : MonoBehaviour
 
     private void GetOutWater(Collider _player)
     {
+
         if (GameManager.isWater)
         {
             GameManager.isWater = false;
-            _player.transform.GetComponent<Rigidbody>().drag = originDrag;
+            Invoke("restoreDrag", 1.0f);
         }
+    }
+
+    void restoreDrag()
+    {
+        if (!GameManager.isWater) thePlayer.transform.GetComponent<Rigidbody>().drag = originDrag;
     }
 
 }
