@@ -355,10 +355,15 @@
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEditor.UI.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEngine.UI.ref.dll"
 "Assets/MeshGenerator.cs"
+"Assets/Scripts/Buoyancy/ModifyPlayerMesh.cs"
+"Assets/Scripts/Buoyancy/Player_Buoyancy.cs"
+"Assets/Scripts/Buoyancy/TriangleData.cs"
+"Assets/Scripts/Buoyancy/WaterController.cs"
 "Assets/Scripts/CameraBehaviour.cs"
 "Assets/Scripts/DayAndNight.cs"
 "Assets/Scripts/GameManager.cs"
 "Assets/Scripts/PlayerBehavior.cs"
+"Assets/Scripts/water_check.cs"
 -langversion:9.0
 
 /deterministic
