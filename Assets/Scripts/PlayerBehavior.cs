@@ -1,12 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 
 //Rigidbody 컴포넌트가 반드시 추가된다
 [RequireComponent(typeof(Rigidbody))]
 public class PlayerBehavior : MonoBehaviour
 {
+    [Tooltip("걸음 수, 헤엄 수, 날갯짓 수")]
+    public Text score;
 
     [Tooltip("최대 이동 속도")]
     public float MaxMoveSpeed = 5.0f;
@@ -51,6 +54,32 @@ public class PlayerBehavior : MonoBehaviour
     float heightAboveGround;
 
     [SerializeField] [Tooltip("현재 속도")] float moveSpeed;
+
+    animationTime AnimationTime;
+    /// <summary>
+    /// 걸음 수, 헤엄 수, 날갯짓 수를 세기 위함. 
+    /// </summary>
+    private struct animationTime
+    {
+        public float swim;
+        public float walk;
+        public float run;
+        public float fly;
+    }
+
+    private string CurrentPlayingAnimation
+    {
+        get
+        {
+            int w = animator.GetCurrentAnimatorClipInfo(0).Length;
+            string[] clipName = new string[w];
+            for (int i = 0; i < w; i += 1)
+            {
+                clipName[i] = animator.GetCurrentAnimatorClipInfo(0)[i].clip.name;
+            }
+            return string.Join(", ", clipName);
+        }
+    }
 
 
     /// <summary>
@@ -101,6 +130,7 @@ public class PlayerBehavior : MonoBehaviour
         GameManager.isFlying = false;
         animator.SetBool("isFlying", false);
     }
+    
 
 
     // Start is called before the first frame update
@@ -111,6 +141,7 @@ public class PlayerBehavior : MonoBehaviour
         //animator 설정.
         animator = GetComponent<Animator>();
         constForce = GetComponent<ConstantForce>();
+        AnimationTime.run = AnimationTime.fly = AnimationTime.swim = AnimationTime.walk = 0.0f;
     }
 
     // Update is called once per frame
@@ -165,6 +196,14 @@ public class PlayerBehavior : MonoBehaviour
             //1초 동안 중력 서서히 복구.
             constForce.force = new Vector3(0.0f, Mathf.Clamp(constForce.force.y-myRigidbody.mass*9.81f*Time.deltaTime, 0, 9.81f), 0.0f);
         }
+
+        if (CurrentPlayingAnimation.Contains("run")) AnimationTime.run += Time.deltaTime;
+        if (CurrentPlayingAnimation.Contains("Walk")) AnimationTime.walk += Time.deltaTime;
+        if (CurrentPlayingAnimation.Contains("swim")) AnimationTime.swim += Time.deltaTime;
+        if (CurrentPlayingAnimation.Contains("fly")) AnimationTime.fly += Time.deltaTime;
+        //UI 수정
+        score.text = "걸음 수 : " + (int)(AnimationTime.run * 4.0f + AnimationTime.walk * 2.0f) + "\n수영 수 : " + (int) (AnimationTime.swim * (1.0f / 3.0f)) + "\n날갯짓 수 : " + (int) AnimationTime.fly/2 + "\n";
+
     }
 
     //플레이어의 움직임을 구현
