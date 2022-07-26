@@ -96,7 +96,7 @@ public class PlayerBehavior : MonoBehaviour
     /// <summary>
     /// 플레이어가 점프함.
     /// </summary>
-    void Jump()
+    public void Jump()
     {
        if (Mathf.Abs(myRigidbody.velocity.y)<0.1f && heightAboveGround<0.2f) //점프 중이지 않을 때
        {
@@ -105,7 +105,7 @@ public class PlayerBehavior : MonoBehaviour
        else return; //점프 중일 때는 실행하지 않고 바로 return.
     }
 
-    void Fly()
+    public void Fly()
     {
 
         if ( !(GameManager.isWater||GameManager.isFlying) ) //물 위에 있지도 않고 비행 중도 아닐 때
