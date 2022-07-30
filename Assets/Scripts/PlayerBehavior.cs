@@ -43,11 +43,25 @@ public class PlayerBehavior : MonoBehaviour
     /// </summary>
     bool flyStart;
 
+    /// <summary>
+    /// 플레이어 음악 설정
+    /// </summary>
+    AudioSource audioSource;
+
+    public AudioClip swimClip;
+    public AudioClip flyClip;
+    public AudioClip walkClip;
+    public AudioClip runClip;
+    public AudioClip idleClip;
+
+    /// <summary>
+    /// 거위의 울음소리 간격 랜덤 설정
+    /// </summary>
+    float next_honk_time;
+    float time_since_last_honk;
+
     [Tooltip("마우스 위치")]
     Ray ray;                        
-
-    [Tooltip("지형")]
-    public Terrain Ground; 
 
     [SerializeField]
     [Tooltip("바닥과 플레이어 간 거리")]
@@ -189,6 +203,11 @@ public class PlayerBehavior : MonoBehaviour
         animator = GetComponent<Animator>();
         constForce = GetComponent<ConstantForce>();
         AnimationTime.run = AnimationTime.fly = AnimationTime.swim = AnimationTime.walk = 0.0f;
+        //오디오 소스 설정
+        audioSource = GetComponent<AudioSource>();
+
+        //게임 시작 후 몇 초 후에 울지 설정.
+        next_honk_time = Random.Range(5.0f, 10.0f);
     }
 
     // Update is called once per frame
@@ -244,10 +263,68 @@ public class PlayerBehavior : MonoBehaviour
             constForce.force = new Vector3(0.0f, Mathf.Clamp(constForce.force.y-myRigidbody.mass*9.81f*Time.deltaTime, 0, 9.81f), 0.0f);
         }
 
-        if (CurrentPlayingAnimation.Contains("run")) AnimationTime.run += Time.deltaTime;
-        if (CurrentPlayingAnimation.Contains("Walk")) AnimationTime.walk += Time.deltaTime;
-        if (CurrentPlayingAnimation.Contains("swim")) AnimationTime.swim += Time.deltaTime;
-        if (CurrentPlayingAnimation.Contains("fly")) AnimationTime.fly += Time.deltaTime;
+        //Fly할 때 pitch 바꿈.
+        audioSource.pitch = 1.0f;
+
+        if (CurrentPlayingAnimation.Contains("run"))
+        {
+            AnimationTime.run += Time.deltaTime;
+            if (!audioSource.clip.name.Contains("run"))
+            { 
+                audioSource.clip = runClip;
+                audioSource.Play();
+            }
+        }
+        if (CurrentPlayingAnimation.Contains("Walk"))
+        {
+            AnimationTime.walk += Time.deltaTime;
+            if (!audioSource.clip.name.Contains("walk"))
+            {
+                audioSource.clip = walkClip;
+                audioSource.Play();
+            }
+        }
+        if (CurrentPlayingAnimation.Contains("swim"))
+        {
+            AnimationTime.swim += Time.deltaTime;
+            if (!audioSource.clip.name.Contains("swim"))
+            {
+                audioSource.clip = swimClip;
+                audioSource.Play();
+            }
+        }
+        if (CurrentPlayingAnimation.Contains("fly"))
+        {
+            AnimationTime.fly += Time.deltaTime;
+            Debug.Log(audioSource.clip.name);
+            if (!audioSource.clip.name.Contains("wings"))
+            {
+                audioSource.pitch = 0.7f;
+                audioSource.clip = flyClip;
+                audioSource.Play();
+            }
+        }
+
+        if (CurrentPlayingAnimation.Contains("idle"))
+        {
+
+            time_since_last_honk += Time.deltaTime;
+            if (!audioSource.clip.name.Contains("울음"))
+            {
+                //몇 초 후에 울지 설정.
+                next_honk_time = Random.Range(5.0f, 10.0f);
+                audioSource.clip = idleClip;
+            }
+
+            if (time_since_last_honk>next_honk_time) 
+            { 
+                audioSource.Play();
+                time_since_last_honk = 0.0f;
+                next_honk_time = Random.Range(5.0f, 10.0f);
+            }
+        }
+
+
         //UI 수정
         score.text = "걸음 수 : " + (int)(AnimationTime.run * 4.0f + AnimationTime.walk * 2.0f) + "\n수영 수 : " + (int) (AnimationTime.swim * (1.0f / 3.0f)) + "\n날갯짓 수 : " + (int) AnimationTime.fly/2 + "\n";
 
