@@ -55,6 +55,11 @@ public class PlayerBehavior : MonoBehaviour
 
     [SerializeField] [Tooltip("현재 속도")] float moveSpeed;
 
+    /// <summary>
+    /// 비행 중 상승할지 하강할지.
+    /// </summary>
+    int elevation = 0;
+
     animationTime AnimationTime;
     /// <summary>
     /// 걸음 수, 헤엄 수, 날갯짓 수를 세기 위함. 
@@ -93,6 +98,28 @@ public class PlayerBehavior : MonoBehaviour
         transform.LookAt(LookPoint);
     }
 
+    public void MoveForward()
+    {
+        //이동 속도가 연속적으로 변함. 
+        moveSpeed += 1 * Time.deltaTime;
+        moveSpeed = Mathf.Clamp(moveSpeed, 0.0f, MaxMoveSpeed);
+        animator.SetFloat("Speed", moveSpeed);
+    }
+
+    public void TurnRight()
+    {
+        Vector3 rotateInput = new Vector3(0, 1, 0);
+        Vector3 rotateVelocity = rotateInput.normalized * rotationSpeed;
+        transform.Rotate(rotateVelocity);
+    }
+
+    public void TurnLeft()
+    {
+        Vector3 rotateInput = new Vector3(0, -1, 0);
+        Vector3 rotateVelocity = rotateInput.normalized * rotationSpeed;
+        transform.Rotate(rotateVelocity);
+    }
+
     /// <summary>
     /// 플레이어가 점프함.
     /// </summary>
@@ -108,14 +135,14 @@ public class PlayerBehavior : MonoBehaviour
     public void Fly()
     {
 
-        if ( !(GameManager.isWater||GameManager.isFlying) ) //물 위에 있지도 않고 비행 중도 아닐 때
+        if ( !(GameManager.isWater||GameManager.isFlying||flyStart) ) //물 위에 있지도 않고 비행 중도 아닐 때
         {
             flyStart = true;
             GameManager.isFlying = true;
             animator.SetBool("isFlying", true);
             if (heightAboveGround<2.0f)
             myRigidbody.AddForce(Vector3.up * 60.0f, ForceMode.Impulse); //위쪽으로 힘을 준다.
-            constForce.force=new Vector3(0.0f, 9.81f*myRigidbody.mass-10.0f, 0.0f);
+            constForce.force=new Vector3(0.0f, 9.81f*myRigidbody.mass-1.0f, 0.0f);
 
             Invoke("uncheck_flyStart", 1.0f);
         }
@@ -123,12 +150,32 @@ public class PlayerBehavior : MonoBehaviour
 
     }
 
-    void uncheck_flyStart() { flyStart = false; }
+
+    public void FlyUp()
+    {
+        elevation = 10;
+    }
+
+    public void FlyDown()
+    {
+        elevation = -5;
+    }
+
+    void uncheck_flyStart() 
+    { 
+        flyStart = false;
+        GameObject.Find("ScoreUI").transform.Find("FlyButton").gameObject.SetActive(false);
+        GameObject.Find("ScoreUI").transform.Find("UpButton").gameObject.SetActive(true);
+        GameObject.Find("ScoreUI").transform.Find("DownButton").gameObject.SetActive(true);
+    }
 
     void FlyEnd()
     {
         GameManager.isFlying = false;
         animator.SetBool("isFlying", false);
+        GameObject.Find("ScoreUI").transform.Find("UpButton").gameObject.SetActive(false);
+        GameObject.Find("ScoreUI").transform.Find("DownButton").gameObject.SetActive(false);
+        GameObject.Find("ScoreUI").transform.Find("FlyButton").gameObject.SetActive(true);
     }
     
 
@@ -152,7 +199,6 @@ public class PlayerBehavior : MonoBehaviour
         //플레이어 움직임과 회전 구현(화살표)
         int horizontal = 0;
         int vertical = 0;
-        float elevation = 0;
 
         //z키를 누른 경우 비행 시작.
         if (!GameManager.isFlying && Input.GetKey(KeyCode.Z) && !Input.GetKey("left shift")) { Fly(); }
@@ -168,17 +214,18 @@ public class PlayerBehavior : MonoBehaviour
 
         Vector3 moveInput = new Vector3(0, 0, 1.0f);
         //이동 속도가 연속적으로 변함. 
-        moveSpeed += (vertical==0? -5 : 1)*Time.deltaTime;
+        if (!BtnController.CheckGoButton()) moveSpeed += (vertical==0? -3 : 1)*Time.deltaTime;
         moveSpeed = Mathf.Clamp(moveSpeed, 0.0f, MaxMoveSpeed);
         animator.SetFloat("Speed", moveSpeed);
         
-        Vector3 moveVelocity = moveInput * moveSpeed* (GameManager.isFlying? 3:1)+new Vector3(0, elevation, 0);  //비행 중이면 3배
+        velocity = moveInput * moveSpeed* (GameManager.isFlying? 3:1)+new Vector3(0, elevation, 0);  //비행 중이면 3배
+
+        elevation = 0;  //다음 프레임에 영향이 가지 않도록 초기화
 
         Vector3 rotateInput = new Vector3(0, horizontal, 0);
         Vector3 rotateVelocity = rotateInput.normalized * rotationSpeed;
 
-        velocity = moveVelocity;
-        transform.Rotate(rotateVelocity);
+        if (horizontal!=0) transform.Rotate(rotateVelocity);
 
         //바닥과의 거리 구하기
         {
