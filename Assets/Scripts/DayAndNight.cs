@@ -4,12 +4,6 @@ using UnityEngine;
 
 public class DayAndNight : MonoBehaviour
 {
-
-    [Tooltip("낮 하늘")]
-    public Material DaySkybox;
-    [Tooltip("밤하늘")]
-    public Material NightSkybox;
-
     [SerializeField][Tooltip("게임 세계에서의 100초 = 현실 세계의 1초")]
     float secondPerRealTimeSecond=100.0f;
 
@@ -18,13 +12,28 @@ public class DayAndNight : MonoBehaviour
     [SerializeField][Tooltip("낮 상태의 Fog 밀도")]
     float dayFogDensity = 0.0f;
     [SerializeField] [Tooltip("증감량 비율")] float fogDensityCalc = 0.1f;
-    
+
+    /// <summary>
+    /// 배경음악 설정
+    /// </summary>
+    AudioSource audioSource;
+    [Tooltip("낮 배경음악")]
+    public AudioClip dayBgm;
+    [Tooltip("밤 배경음악")]
+    public AudioClip nightBgm;
+
+    [Tooltip("낮 하늘")]
+    public Material DaySkybox;
+    [Tooltip("밤하늘")]
+    public Material NightSkybox;
+
     float currentFogDensity;
 
     // Start is called before the first frame update
     void Start()
     {
         dayFogDensity = RenderSettings.fogDensity;
+        audioSource = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -42,6 +51,12 @@ public class DayAndNight : MonoBehaviour
         if (GameManager.isNight)
         {
             if (!RenderSettings.skybox.name.Contains("Night")) RenderSettings.skybox = NightSkybox;
+            if (!audioSource.clip.name.Contains("night"))
+            {
+                audioSource.clip = nightBgm;
+                audioSource.Play();
+            } 
+            
             if (currentFogDensity <= nightFogDensity)
             {
                 currentFogDensity += 0.01f * fogDensityCalc * Time.deltaTime;
@@ -51,6 +66,12 @@ public class DayAndNight : MonoBehaviour
         else
         {
             if (!RenderSettings.skybox.name.Contains("Day")) RenderSettings.skybox = DaySkybox;
+            if (!audioSource.clip.name.Contains("day"))
+            {
+                audioSource.clip = dayBgm;
+                audioSource.Play();
+            }
+
             if (currentFogDensity >= nightFogDensity)
             {
                 currentFogDensity -= 0.01f * fogDensityCalc * Time.deltaTime;
