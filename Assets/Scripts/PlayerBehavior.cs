@@ -296,7 +296,6 @@ public class PlayerBehavior : MonoBehaviour
         if (CurrentPlayingAnimation.Contains("fly"))
         {
             AnimationTime.fly += Time.deltaTime;
-            Debug.Log(audioSource.clip.name);
             if (!audioSource.clip.name.Contains("wings"))
             {
                 audioSource.pitch = 0.7f;

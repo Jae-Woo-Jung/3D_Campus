@@ -21,6 +21,19 @@ public class CameraBehaviour : MonoBehaviour
     [Tooltip("회전 속도, q, e, shift키로 회전")]
     public float rotSpeed = 5.0f;
 
+    /// <summary>
+    /// 화면 터치로 카메라 회전 구현.
+    /// </summary>
+    public Vector2 nowPos, prePos;
+    public Vector3 movePos;
+    public Vector2 clickPoint;
+
+
+    private void Start()
+    {
+        Input.simulateMouseWithTouches = true;
+    }
+
     // Update is called once per frame
     void Update()
     {
@@ -48,6 +61,47 @@ public class CameraBehaviour : MonoBehaviour
             //X축 기준으로 회전
             transform.RotateAround(goose_position, target.rotation*Vector3.right, rotSpeed);
         }
+
+
+        //화면 터치로 화면 회전
+        if (Input.touchCount == 1 )
+        {
+            Debug.Log("터치 감지 : "+ Input.touchCount);
+
+            Touch touch = Input.GetTouch(0);
+            if (touch.phase == TouchPhase.Began)
+            {
+                prePos = touch.position - touch.deltaPosition;
+            }
+            else if (touch.phase == TouchPhase.Moved)
+            {
+                nowPos = touch.position - touch.deltaPosition;
+                movePos = (Vector3)(prePos - nowPos) * Time.deltaTime;
+                //Swap movePos.x and movePos.y
+                movePos.x = movePos.y+movePos.x;
+                movePos.y = movePos.x - movePos.y;
+                movePos.x =-(movePos.x-movePos.y);  //(x, y, 0)가 마우스 이동이면, 회전축은 (y, -x, 0).
+
+                transform.RotateAround(goose_position, target.rotation*movePos, rotSpeed);
+                prePos = touch.position - touch.deltaPosition;
+            }
+        }
+
+        //마우스로 카메라 회전
+        if (Input.GetMouseButtonDown(0)) clickPoint = Input.mousePosition;
+        if (Input.GetMouseButton(0))
+        {
+            Vector3 movePos= Camera.main.ScreenToViewportPoint((Vector2)Input.mousePosition - clickPoint);
+
+            //Swap movePos.x and movePos.y
+            movePos.x = movePos.y + movePos.x;
+            movePos.y = movePos.x - movePos.y;
+            movePos.x = -(movePos.x - movePos.y);  //(x, y, 0)가 마우스 이동이면, 회전축은 (y, -x, 0).
+
+            transform.RotateAround(goose_position, target.rotation * movePos, rotSpeed/2.0f); //회전 속도가 빨라서 2.0f로 나눔.
+            clickPoint = Input.mousePosition;
+        }
+
 
         lookOffset = transform.position - goose_position;
         lookOffset.Normalize();
