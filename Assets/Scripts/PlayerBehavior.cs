@@ -266,6 +266,9 @@ public class PlayerBehavior : MonoBehaviour
         //Fly할 때 pitch 바꿈.
         audioSource.pitch = 1.0f;
 
+        //idle 상태 일 때 loop를 false로 바꿈. 
+        audioSource.loop = true;
+
         if (CurrentPlayingAnimation.Contains("run"))
         {
             AnimationTime.run += Time.deltaTime;
@@ -306,7 +309,7 @@ public class PlayerBehavior : MonoBehaviour
 
         if (CurrentPlayingAnimation.Contains("idle"))
         {
-
+            audioSource.loop = false;
             time_since_last_honk += Time.deltaTime;
             if (!audioSource.clip.name.Contains("울음"))
             {
