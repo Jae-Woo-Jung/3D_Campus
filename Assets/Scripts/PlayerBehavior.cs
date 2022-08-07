@@ -34,10 +34,7 @@ public class PlayerBehavior : MonoBehaviour
     /// 애니메이션 설정을 위한 컴포넌트
     /// </summary>
     Animator animator;
-    /// <summary>
-    /// 중력을 조절하기 위한 컴포넌트
-    /// </summary>
-    ConstantForce constForce;
+    
     /// <summary>
     /// 비행 준비 중에 비행 종료가 안 되도록 함. 
     /// </summary>
@@ -115,8 +112,11 @@ public class PlayerBehavior : MonoBehaviour
     public void MoveForward()
     {
         //이동 속도가 연속적으로 변함. 
+        Debug.Log(Time.deltaTime);
         moveSpeed += 1 * Time.deltaTime;
+        Debug.Log("Before Clamp : " + moveSpeed);
         moveSpeed = Mathf.Clamp(moveSpeed, 0.0f, MaxMoveSpeed);
+        Debug.Log("After Clamp : "+Time.deltaTime);
         animator.SetFloat("Speed", moveSpeed);
     }
 
@@ -156,9 +156,9 @@ public class PlayerBehavior : MonoBehaviour
             animator.SetBool("isFlying", true);
             if (heightAboveGround<2.0f)
             myRigidbody.AddForce(Vector3.up * 60.0f, ForceMode.Impulse); //위쪽으로 힘을 준다.
-            constForce.force=new Vector3(0.0f, 9.81f*myRigidbody.mass-1.0f, 0.0f);
-
-            Invoke("uncheck_flyStart", 1.0f);
+            myRigidbody.drag = 0.1f;  //위로 영원히 올라가지 않게 조절.
+            myRigidbody.useGravity = false;
+            Invoke("uncheck_flyStart", 2.0f);
         }
         else return; //물에 있거나 비행 중이면 실행하지 않고 바로 return.
 
@@ -178,18 +178,20 @@ public class PlayerBehavior : MonoBehaviour
     void uncheck_flyStart() 
     { 
         flyStart = false;
-        GameObject.Find("ScoreUI").transform.Find("FlyButton").gameObject.SetActive(false);
-        GameObject.Find("ScoreUI").transform.Find("UpButton").gameObject.SetActive(true);
-        GameObject.Find("ScoreUI").transform.Find("DownButton").gameObject.SetActive(true);
+        GameObject.Find("ButtonUI").transform.Find("FlyButton").gameObject.SetActive(false);
+        GameObject.Find("ButtonUI").transform.Find("UpButton").gameObject.SetActive(true);
+        GameObject.Find("ButtonUI").transform.Find("DownButton").gameObject.SetActive(true);
     }
 
     void FlyEnd()
     {
         GameManager.isFlying = false;
         animator.SetBool("isFlying", false);
-        GameObject.Find("ScoreUI").transform.Find("UpButton").gameObject.SetActive(false);
-        GameObject.Find("ScoreUI").transform.Find("DownButton").gameObject.SetActive(false);
-        GameObject.Find("ScoreUI").transform.Find("FlyButton").gameObject.SetActive(true);
+        GameObject.Find("ButtonUI").transform.Find("UpButton").gameObject.SetActive(false);
+        GameObject.Find("ButtonUI").transform.Find("DownButton").gameObject.SetActive(false);
+        GameObject.Find("ButtonUI").transform.Find("FlyButton").gameObject.SetActive(true);
+        myRigidbody.useGravity = true;
+        myRigidbody.drag = 0.0f;
     }
     
 
@@ -201,7 +203,6 @@ public class PlayerBehavior : MonoBehaviour
         myRigidbody = GetComponent<Rigidbody>();
         //animator 설정.
         animator = GetComponent<Animator>();
-        constForce = GetComponent<ConstantForce>();
         AnimationTime.run = AnimationTime.fly = AnimationTime.swim = AnimationTime.walk = 0.0f;
         //오디오 소스 설정
         audioSource = GetComponent<AudioSource>();
@@ -233,7 +234,7 @@ public class PlayerBehavior : MonoBehaviour
 
         Vector3 moveInput = new Vector3(0, 0, 1.0f);
         //이동 속도가 연속적으로 변함. 
-        if (!BtnController.CheckGoButton()) moveSpeed += (vertical==0? -3 : 1)*Time.deltaTime;
+        if (!BtnController.CheckGoButton() && !(Arduino_Reading.GetY()<412) ) moveSpeed += (vertical==0? -3 : 1)*Time.deltaTime;
         moveSpeed = Mathf.Clamp(moveSpeed, 0.0f, MaxMoveSpeed);
         animator.SetFloat("Speed", moveSpeed);
         
@@ -259,8 +260,6 @@ public class PlayerBehavior : MonoBehaviour
         if (!flyStart && GameManager.isFlying && heightAboveGround < 2.0f)
         {
             FlyEnd();
-            //1초 동안 중력 서서히 복구.
-            constForce.force = new Vector3(0.0f, Mathf.Clamp(constForce.force.y-myRigidbody.mass*9.81f*Time.deltaTime, 0, 9.81f), 0.0f);
         }
 
         //Fly할 때 pitch 바꿈.
