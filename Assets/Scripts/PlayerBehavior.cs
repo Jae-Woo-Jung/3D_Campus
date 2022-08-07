@@ -156,7 +156,7 @@ public class PlayerBehavior : MonoBehaviour
             animator.SetBool("isFlying", true);
             if (heightAboveGround<2.0f)
             myRigidbody.AddForce(Vector3.up * 60.0f, ForceMode.Impulse); //위쪽으로 힘을 준다.
-            myRigidbody.drag = 0.1f;  //위로 영원히 올라가지 않게 조절.
+            myRigidbody.drag = 0.3f;  //위로 영원히 올라가지 않게 조절.
             myRigidbody.useGravity = false;
             Invoke("uncheck_flyStart", 2.0f);
         }

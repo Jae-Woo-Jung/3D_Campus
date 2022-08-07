@@ -46,7 +46,7 @@ public class Arduino_Reading : MonoBehaviour
         if (data.Contains("y")) { data_y = int.Parse(data.Substring(indexOfColon + 1)); }  //기본값 y=512, 위쪽이 y=0.
         if (data.Contains("z")) { data_z = int.Parse(data.Substring(indexOfColon + 1)); }  //눌리면 z=0, 안 눌리면 z=1
 
-        Debug.Log(data);
+        //Debug.Log(data);
         isReading = false;
     }
 
