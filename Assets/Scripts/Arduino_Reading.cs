@@ -38,16 +38,27 @@ public class Arduino_Reading : MonoBehaviour
     // Run is called asyncronously about Update
     void Run()
     {
-        isReading = true;
+        try
+        {
+            isReading = true;
 
-        string data = arduino.ReadLine();
-        int indexOfColon = data.IndexOf(":");
-        if (data.Contains("x")) { data_x = int.Parse(data.Substring(indexOfColon + 1)); }   // 기본값 x=512. 왼쪽이 x=0
-        if (data.Contains("y")) { data_y = int.Parse(data.Substring(indexOfColon + 1)); }  //기본값 y=512, 위쪽이 y=0.
-        if (data.Contains("z")) { data_z = int.Parse(data.Substring(indexOfColon + 1)); }  //눌리면 z=0, 안 눌리면 z=1
+            string data = arduino.ReadLine();
+            Debug.Log(data);
+            int indexOfColon = data.IndexOf(":");
+            if (data.Contains("x")) { data_x = int.Parse(data.Substring(indexOfColon + 1)); }   // 기본값 x=512. 왼쪽이 x=0
+            if (data.Contains("y")) { data_y = int.Parse(data.Substring(indexOfColon + 1)); }  //기본값 y=512, 위쪽이 y=0.
+            if (data.Contains("z")) { data_z = int.Parse(data.Substring(indexOfColon + 1)); }  //눌리면 z=0, 안 눌리면 z=1
 
-        //Debug.Log(data);
-        isReading = false;
+            //Debug.Log(data);
+            isReading = false;
+        }
+        catch
+        {
+            isReading = false;
+            Debug.Log("Strange Serial data");
+            return;
+        }
+
     }
 
     private void Update()

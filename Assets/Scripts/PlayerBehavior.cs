@@ -112,11 +112,9 @@ public class PlayerBehavior : MonoBehaviour
     public void MoveForward()
     {
         //이동 속도가 연속적으로 변함. 
-        Debug.Log(Time.deltaTime);
+        //Debug.Log(Time.deltaTime);
         moveSpeed += 1 * Time.deltaTime;
-        Debug.Log("Before Clamp : " + moveSpeed);
         moveSpeed = Mathf.Clamp(moveSpeed, 0.0f, MaxMoveSpeed);
-        Debug.Log("After Clamp : "+Time.deltaTime);
         animator.SetFloat("Speed", moveSpeed);
     }
 
