@@ -232,7 +232,9 @@ public class PlayerBehavior : MonoBehaviour
 
         Vector3 moveInput = new Vector3(0, 0, 1.0f);
         //이동 속도가 연속적으로 변함. 
-        if (!BtnController.CheckGoButton() && !(Arduino_Reading.GetY()<412) ) moveSpeed += (vertical==0? -3 : 1)*Time.deltaTime;
+        if (!BtnController.CheckGoButton() && !(Arduino_Reading.GetY() < 412)) {
+            moveSpeed += (vertical == 0 ? -3 : 1) * Time.deltaTime; 
+        }
         moveSpeed = Mathf.Clamp(moveSpeed, 0.0f, MaxMoveSpeed);
         animator.SetFloat("Speed", moveSpeed);
         

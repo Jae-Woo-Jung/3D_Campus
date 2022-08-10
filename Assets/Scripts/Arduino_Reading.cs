@@ -55,6 +55,8 @@ public class Arduino_Reading : MonoBehaviour
         catch
         {
             isReading = false;
+            data_x = data_y=512;
+            data_z = 1;
             Debug.Log("Strange Serial data");
             return;
         }
